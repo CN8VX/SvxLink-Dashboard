@@ -1,0 +1,154 @@
+/*
+style.css
+---------
+Créée par CN8VX Youness "cn8vx.ma@gmail.com"
+Pour SvxLink Log et Reflector Log
+Version CSS: 2.0
+Date de creation: 08/02/2024
+Mise à jour: 15/02/2024
+Date de La dernière  mise à jour: 21/02/2024
+*/
+html, 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Times,"Bodoni MT",serif;
+  background-color: #edf5fd;
+}
+
+/* pour text */
+.text-info {
+  font-size: 20px;
+  color: #4da3ff;
+  text-align: center;
+  font-weight: bold;
+}
+.text-vertion {
+  font-weight: bold;
+  color:#990000;
+  font-size:15px;
+}
+.cl-h1 {
+  /*color:#FFEB3B;*/
+  text-decoration: underline;
+}
+
+.top-container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #4da3ff;
+  padding: 3px;
+  text-align: center;
+}
+.top-container h1 {
+  margin-block-start: 0.1em;
+  margin-block-end: 0.1em;
+}
+.header {
+  padding-top: 0;
+  padding-right: 5px;
+  padding-bottom: 10px;
+  padding-left: 0;
+  background: #061d34;
+  text-align: center;
+  position: fixed;
+  top: 75px; /* Ajustez la valeur en fonction de vos besoins */
+  width: 100%;
+  z-index: 1000;
+}
+.content {
+  padding-top: 220px; /* Ajout d'un espace équivalent à la hauteur du header pour que le contenu commence en dessous */
+}
+.content h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+h2 { 
+  margin-top: 0;
+  
+}
+
+/* Tableaux */
+fieldset {
+  box-shadow:0 0 10px #999;
+  background-color:#f2f8fe; 
+  width:50%;
+  margin-top:0px;
+  font-size:12px;
+  border-top-left-radius: 10px; 
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px; 
+  border-bottom-right-radius: 10px;
+ /*margin-bottom:10px;
+ margin-left:6px;
+ margin-right:0px;*/
+}
+.table-containertb {
+  margin-top: 2px;
+  text-align: center;
+}
+
+/* pour pre */
+pre {
+  margin-left: 5px;
+  margin-right: 10px;
+  background-color: transparent;
+  margin-bottom: 10px;
+  overflow: auto;
+  padding: 0px;
+  font-size: 15px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  /*border-radius: 10px;*/
+  /*border: 3px solid #68cfff;*/
+  /*font-family: "Courier 10 Pitch",Courier,monospace;*/
+}
+
+
+footer {
+  color: #939ba2;
+  font-size: 13px;
+}
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #061d34;
+  text-align: center;
+  padding: 0;
+  z-index: 1000;
+}
+
+/* Media Query For smartphones screens */
+/*@media all and (max-width: 850px)*/
+/*Pour tous les appareils équipés d'écrans et dont la taille est inférieure à 780px*/
+@media screen and (max-width: 780px) {
+
+.top-container h1 {
+  font-size: 1.3em;
+}
+.header {
+  top: 33px;
+}
+.text-info {
+  font-size: 100%;
+}
+pre {
+  margin-right: 2px;
+  font-size: 10px;
+}
+fieldset {
+  font-size:10px;
+  width: 90%;
+}
+footer {
+  font-size: 60%;
+}
+
+}
