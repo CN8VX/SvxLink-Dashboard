@@ -87,7 +87,7 @@ sudo rm -rf html
 ✅ 2. Use the following command to download and copy the content into `/var/www`:
 
 ```bash
-git clone https://github.com/CN8VX/SvxLink-Dashboard html
+sudo git clone https://github.com/CN8VX/SvxLink-Dashboard html
 ```
 
 ```bash
