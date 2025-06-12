@@ -1,0 +1,430 @@
+/*
+style.css
+---------
+Créée par CN8VX Youness
+Version: 3.0
+Date de creation: 2022
+Mise à jour: 2025
+Date de La dernière  mise à jour: 12/05/2025
+*/
+
+/* style.css pour les pages logs AllStar et EchoLink */
+/* Variables CSS pour cohérence des couleurs et facilité de maintenance */
+:root {
+  --primary-color: #1a3c6e;
+  --secondary-color: #3b73c5;
+  --accent-color: #ff6b01;
+  --background-color: #f5f9ff;
+  --table-header-bg: #1a3c6e;
+  --table-row-even: #f2f6fc;
+  --table-row-odd: #ffffff;
+  --table-border: #d1e1ff;
+  --connect-color: #228b22;
+  --disconnect-color: #cc0000;
+  --link-color: #0056b3;
+  --text-color: #333333;
+  --light-text: #ffffff;
+  --Invalidpass-color: #cc0000;
+}
+
+/* Reset et styles de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 6em;
+}
+
+/* Header et logo */
+.logtile-container {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, var(--primary-color) 10%, var(--secondary-color) 60%);
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-title {
+  color: var(--light-text);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.icm {
+  height: 50px;
+  width: auto;
+}
+
+/* Titres */
+h1 {
+  color: var(--primary-color);
+  margin: 20px 0 10px;
+  font-size: 2rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  position: relative;
+}
+
+h2 {
+  color: var(--secondary-color);
+  margin: 15px 0;
+  font-size: 1.3rem;
+}
+
+.colr-vrf {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Tableaux */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--light-text);
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-row-even);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--table-row-odd);
+}
+
+td {
+  padding: 10px 15px;
+  border-bottom: 1px solid var(--table-border);
+}
+
+/* État des actions */
+.action {
+  font-weight: bold;
+}
+
+td.action:contains('Connected') {
+  color: var(--connect-color);
+}
+
+td.action:contains('Disconnected') {
+  color: var(--disconnect-color);
+}
+
+/* Amélioration des états d'action avec JS */
+.connected {
+  color: var(--connect-color);
+  position: relative;
+}
+
+.disconnected {
+  color: var(--disconnect-color);
+  position: relative;
+}
+
+.connected::before,
+.disconnected::before {
+  content: '•';
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
+/* Liens */
+a.lien {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s;
+  border-bottom: 1px dotted var(--link-color);
+}
+
+a.lien:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+/* Boutons */
+.button-01 {
+  background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+}
+
+.button-01:hover {
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Centrage de texte et d'éléments */
+.cetr {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.text-cetr {
+  text-align: center;
+  margin: 10px 0;
+  color: var(--secondary-color);
+}
+
+/* Animation clignotante pour alertes */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.clignote {
+  color: var(--disconnect-color);
+  font-weight: bold;
+  animation: blink 2s infinite;
+}
+.text-clt {
+  font-size: 2.2rem;
+  margin: 5em;
+}
+/* Code inline */
+code {
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: var(--accent-color);
+}
+
+/* Styles pour les informations système */
+.sysinfo {
+  background-color: var(--table-row-even);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 25px;
+  border: 1px solid var(--table-border);
+}
+
+.sysinfo h3 {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--accent-color);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.sysinfo table {
+  box-shadow: none;
+}
+
+.sysinfo th {
+  background-color: var(--secondary-color);
+}
+
+/* Back to top button */
+.back_to_top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.back_to_top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back_to_top:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+/* Styles pour le footer */
+footer {
+  background-color: var(--background-color);
+  margin-top: 30px;
+  padding: 15px 0;
+  left: 0;
+  right: 0;  
+  text-align: center;
+  border-top: 1px solid var(--table-border);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+footer a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--accent-color);
+}
+
+/* hardcoded_info */
+.hardware-info {
+  text-align: center;
+  margin-top: 20px;
+  /*padding: 20px;*/
+}
+.hw-table {
+  /*margin: 10px auto;*/
+  /*width: 100%;*/  /* Prend toute la largeur du fieldset */
+  /*margin: 10px;*/     /* Supprime les marges autour */
+  max-width: 900px;
+  border-collapse: collapse;
+  font-size: 14px;
+  border-radius: 0;
+}
+.hw-table th, .hw-table td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: center;
+}
+.hw-table th {
+  /*background: #333;*/
+  font-size: 16px;
+  /*color: #f7c593;*/
+}
+.hardware-info fieldset {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #666;
+  box-shadow: 0 0 10px #000;
+  border-radius: 10px;
+  /*text-align: left;*/ /* pour éviter de centrer tout le texte à l’intérieur */
+}
+.hw-table td:hover {
+  background: #cfc7c7;
+  transition: 0.3s;
+}
+.icon {
+  font-size: 18px;
+}
+.text-hw { 
+font-size: 120%;
+}
+.WebS {
+  margin-top:10px;
+}
+.ip-host {
+  font-size: 10px;
+}
+.platform-os {
+  color:#ef861c
+}
+/* end hardcoded_info */
+
+form > label, input, form > select, form > textarea {
+  /*background: #0289b4;*/
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Montserrat, "sans-serif";
+  box-shadow: 0px 2px 2px 2px var(--primary-color);
+}
+form > label, input, form > select {
+  height: 30px;
+  padding-left: 6px;
+}
+.text02 { 
+  font-size: 23px;
+  background: transparent;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+.clr-red {
+  color: var(--Invalidpass-color);
+  font-weight: bold;
+}
+/* Media queries pour responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .logtile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo-title {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .back_to_top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Support pour les icônes FontAwesome */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-arrow-up:before {
+  content: "↑";
+}
