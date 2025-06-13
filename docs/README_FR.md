@@ -4,7 +4,7 @@
 
 SvxLink-Dashboard by CN8VX est conçu pour les <b><u>répéteurs</u></b> et <b><u>hotspots SvxLink</u></b>.
 
-SvxLink-Dashboard by CN8VX est basé sur le Dashboard de SP2ONG & SP0DZ. Réécrit et reconçu par CN8VX, ce Dashboard est destiné à être utilisé avec les nouvelles versions des répéteurs SvxLink.
+SvxLink-Dashboard by CN8VX est basé sur le Dashboard de SP2ONG & SP0DZ. Revisité par CN8VX, ce Dashboard est destiné à être utilisé avec les nouvelles versions des répéteurs SvxLink.
 
 SvxLink-Dashboard by CN8VX est compatible avec SvxLink version 2 (24.02) et ultérieures sous <b><u>Debian 11 et 12</u></b> ainsi que <b><u>raspios-bookworm-arm64-lite</u></b>.
 
