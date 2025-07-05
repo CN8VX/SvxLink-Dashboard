@@ -25,7 +25,8 @@ $refresh_interval = 5;
 
 // Option pour afficher ou masquer la colonne IP dans les tableaux
 // Option to show or hide the IP column in tables
-$show_ip_column = true; // true = afficher/show, false = masquer/hide
+// true = afficher/show, false = masquer/hide
+$show_ip_column = true;
 
 // login section
 $CONFIG = [
