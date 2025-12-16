@@ -32,10 +32,10 @@ if (fopen($svxConfigFile,'r'))
 	echo "<a href=\"/logsvx\" target=\"_blank\" style=\"color: #0000ff; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> Log</a> |" ;
 	if ($isEchoLink==true) {echo ' <a href="/echolink.php" style="color: #0000ff;font-family: Oswald, sans-serif; font-size: 14pt;">EchoLink</a> |';};
 	$globalRf = $svxconfig['GLOBAL']['RF_MODULE'];
-	echo "<a href=\"http://51.91.156.161\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> SvxReflector</a> |" ;
-	echo "<a href=\"http://57.131.35.97/allmon3\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> AllStarLink HUB</a> |" ;
+	echo "<a href=\"http://refsvx.dmr-maroc.com\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> SvxReflector</a> |" ;
+	echo "<a href=\"http://free.dmr-maroc.com/allmon3\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> AllStarLink HUB</a> |" ;
 	echo "<a href=\"http://6041.adn.systems\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> ADN MAROC</a> |";
-	echo "<a href=\"http://57.131.35.97:8080\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> FreeDMR MAROC</a>" ;
+	echo "<a href=\"http://free.dmr-maroc.com:8080\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> FreeDMR MAROC</a>" ;
 }
 };
 ?>
