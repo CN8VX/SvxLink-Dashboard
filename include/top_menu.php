@@ -45,9 +45,9 @@ if ($isEchoLink) {
     echo " <a href=\"/echolink.php\" style=\"color: #0000ff; font-family: 'Oswald', sans-serif; font-size: 14pt;\">EchoLink</a> |";
 }
 
-echo "<a href=\"http://51.210.47.236\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> SvxReflector</a> |";
-echo "<a href=\"http://135.125.205.162/supermon/link.php?nodes=492510,492511,58998,588891,590820\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> AllStarLink HUB</a> |";
+echo "<a href=\"http://refsvx.dmr-maroc.com/\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> SvxReflector</a> |";
+echo "<a href=\"http://free.dmr-maroc.com/allmon3/\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> AllStarLink HUB</a> |";
 echo "<a href=\"http://6041.adn.systems\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> ADN MAROC</a> |";
-echo "<a href=\"http://135.125.205.162:8080\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> FreeDMR MAROC</a>";
+echo "<a href=\"http://free.dmr-maroc.com:8080/\" target=\"_blank\" style=\"color: #b30000; font-family: 'Oswald', sans-serif; font-size: 14pt;\"> FreeDMR MAROC</a>";
 ?>
 </p>
